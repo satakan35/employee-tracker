@@ -71,12 +71,30 @@ async function viewEmployees() {
   loadMainPrompts();
 }
 //Create viewEmployeesByDepartment function
+async function viewEmployees() {
+  const department = await db.findAllEmployees();
+  const departmentChoices = departments.map(({ id, name }) => ({
+    name: name,
+    value: id
+  }));
 
+
+  console.log("\n");
+  console.table(employees);
 //Create videEmployeesByManager function
+async function viewEmployees() {
+  const manager = await db.findAllEmployees();
 
+
+console.log("\n");
+  console.table(employees);
 //save
 async function removeEmployee() {
   const employees = await db.findAllEmployees();
+  const managerChoices = managers.map(({ id, manager  }) => ({
+    name: manager,
+    value: id
+  }));
 
   const employeeChoices = employees.map(({ id, first_name, last_name }) => ({
     name: `${first_name} ${last_name}`,
