@@ -159,12 +159,19 @@ async function updateEmployeeRole() {
 }
 
 //Create updateEmployeeManager function
+async function updateEmployeeManager() {
+  
+  const employees = await db.findAllEmployees();
+}
 
 //Create viewRoles function
 
+
 //Create addRole function
 
+
 //Create removeRole function
+
 
 //Create addDepartment function
 
